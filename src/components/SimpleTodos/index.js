@@ -40,10 +40,10 @@ const initialTodosList = [
 
 // Write your code here
 const SimpleTodos = () => {
-  const [deleteBtn, setDeleteBtn] = useState(initialTodosList)
+  const [sol, setSol] = useState(initialTodosList)
 
   const removeEl = id => {
-    setDeleteBtn(deleteBtn.filter(each => each.id !== id))
+    setSol(sol.filter(each => each.id !== id))
   }
 
   return (
@@ -51,7 +51,7 @@ const SimpleTodos = () => {
       <div className="whitePageEl">
         <h1 className="headingEl2">Simple Todos</h1>
         <ul>
-          {deleteBtn.map(eachItem => (
+          {sol.map(eachItem => (
             <Solution removeEl={removeEl} key={eachItem.id} items={eachItem} />
           ))}
         </ul>
